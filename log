@@ -21,3 +21,14 @@ Wed 27 Mar 2024 05:15:26 PM UTC:
  1 file changed, 2 insertions(+)
  tests:  0|0
 301ca36
+Wed 27 Mar 2024 05:16:04 PM UTC: 
+ list.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
+   60 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+fb83137
