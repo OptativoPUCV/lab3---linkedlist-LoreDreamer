@@ -20,12 +20,15 @@ struct List {
 typedef List List;
 
 Node * createNode(void * data) {
+  
     Node * new = (Node *)malloc(sizeof(Node));
     assert(new != NULL);
     new->data = data;
     new->prev = NULL;
     new->next = NULL;
+  
     return new;
+  
 }
 
 List * createList() {
@@ -40,7 +43,12 @@ List * createList() {
 }
 
 void * firstList(List * list) {
+
+  if (list == NULL || list->head == NULL)
     return NULL;
+  list->current = list->head;
+  return (void *)list->current->data;
+  
 }
 
 void * nextList(List * list) {
